@@ -1,0 +1,77 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin: 0 auto;
+    gap: 5px;
+}
+
+.board .line {
+    display: flex;
+    gap: 5px;
+    position: relative;
+}
+
+.board .cell {
+    width: 52px;
+    background: transparent;
+    border: 1px solid;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /*position: absolute;*/
+}
+
+.cell.current {
+    border: 1px solid red;
+}
+
+.cell.scale {
+    animation-duration: 0.05s;
+    animation-name: scale;
+}
+
+@keyframes scale {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.1;
+    }
+}
+
+.keyboard {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(10, max-content);
+    justify-items: center;
+    width: max-content;
+    margin: 0 auto;
+    gap: 5px;
+}
+
+.keyboard button {
+    background-color: rgb(243, 243, 243);
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+}
+
+.keyboard button:hover {
+    border: 1px solid #eeeeee;
+}

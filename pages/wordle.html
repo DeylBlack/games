@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wordle JS</title>
+  <link rel="stylesheet" type="text/css" href="../styles/wordle.css"/>
+  <link rel="stylesheet" type="text/css" href="../index.css"/>
+</head>
+<body onmousedown="return false" onselectstart="return false">
+<div class="wrapper">
+  <div class="menu">
+    <select>
+      <option>English</option>
+      <option>Ukranian</option>
+    </select>
+  </div>
+
+  <div class="board" id="board">
+  </div>
+
+  <div class="keyboard" id="keyboard">
+  </div>
+
+  <footer>
+    <i class="fa-solid fa-circle-info"></i>
+  </footer>
+</div>
+</body>
+<script src="https://kit.fontawesome.com/02fae9472e.js" crossorigin="anonymous"></script>
+<script src="../helpers/keyboard.js"></script>
+<script src="../scripts/wordle.js"></script>
+</html>
