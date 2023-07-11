@@ -14,24 +14,28 @@ function createKeyboard() {
         if (keyBoardItem === 'ENTER') {
             button.style.gridColumn = '2';
             button.style.gridColumnStart = '1';
-            button.style.position = 'absolute';
-            button.style.bottom = '0';
-            button.style.left = '0';
-            button.style.width = '90px';
+            button.classList.add('enter')
+            // button.style.position = 'absolute';
+            // button.style.bottom = '0';
+            // button.style.left = '0';
+            // button.style.width = '90px';
         }
 
         if (keyBoardItem === 'BACKSPACE') {
             const img = document.createElement('i')
             img.className = 'fa-solid fa-delete-left';
-            button.style.position = 'absolute';
-            button.style.bottom = '0';
-            button.style.right = '0';
-            button.style.width = '90px';
-            button.style.fontSize = '12px';
-            button.style.display = 'flex';
-            button.style.flexDirection = 'column';
-            button.style.alignItems = 'center';
-            button.style.justifyContent = 'center';
+            button.classList.add('backspace')
+            button.innerText = '';
+
+            // button.style.position = 'absolute';
+            // button.style.bottom = '0';
+            // button.style.right = '0';
+            // button.style.width = '90px';
+            // button.style.fontSize = '12px';
+            // button.style.display = 'flex';
+            // button.style.flexDirection = 'column';
+            // button.style.alignItems = 'center';
+            // button.style.justifyContent = 'center';
             button.append(img)
         }
 
@@ -42,7 +46,7 @@ function createKeyboard() {
 
         button.addEventListener('click', (ev) => {
             switch (ev.srcElement.innerText) {
-                case 'BACKSPACE':
+                case '':
                     deleteLetter();
                     break;
                 case 'ENTER':
@@ -51,7 +55,7 @@ function createKeyboard() {
                 default:
                     pushLetter(ev.srcElement.innerText);
             }
-        })
+        });
         keyboard.append(button);
     })
 }
